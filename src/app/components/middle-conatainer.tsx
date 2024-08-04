@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
-import ab from "@/app/images/about.jpg";
-import a12 from "@/app/images/12.png";
-import a13 from "@/app/images/13.png";
-import Contact from '@/app/components/contact';
+import ab from "../images/about.jpg"; // Adjusted path
+import a12 from "../images/12.png"; // Adjusted path
+import a13 from "../images/13.png"; // Adjusted path
+import Contact from './contact'; // Adjusted path
 
 function Middle() {
   const [typewriterLoaded, setTypewriterLoaded] = useState(false);
