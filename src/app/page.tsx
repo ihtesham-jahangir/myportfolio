@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import logo from "@/app/images/logo.svg";
+import logo from "./images/logo.svg";
 import Mainpage from "./components/main";
 import styles from "@/app/components/css/styles.module.css";
 
