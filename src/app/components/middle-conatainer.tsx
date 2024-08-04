@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
-import ab from "../images/about.jpg"; // Adjusted path
+import ab from '@/app/images/about.jpg';
 import a12 from "../images/12.png"; // Adjusted path
 import a13 from "../images/13.png"; // Adjusted path
 import Contact from './contact'; // Adjusted path
