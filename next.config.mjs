@@ -5,6 +5,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'dummyimage.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'myportfolioihtesham.s3.amazonaws.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
