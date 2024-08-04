@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
-import ab from '@/app/images/about.jpg';
+//import ab from '@/app/images/about.jpg';
 import a12 from "../images/12.png"; // Adjusted path
 import a13 from "../images/13.png"; // Adjusted path
 import Contact from './contact'; // Adjusted path
@@ -60,13 +60,6 @@ function Middle() {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <Image
-              className="object-cover object-center rounded"
-              alt=""
-              src={ab}
-              height={700}
-              width={400}
-            />
           </div>
         </div>
       </section>
