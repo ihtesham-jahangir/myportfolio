@@ -91,7 +91,7 @@ leveraging cutting-edge technologies to deliver impactful solutions.
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="https://private-user-images.githubusercontent.com/97870882/355217358-7ba9a759-8555-4477-95f5-2618db51835a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI4ODYwNzQsIm5iZiI6MTcyMjg4NTc3NCwicGF0aCI6Ii85Nzg3MDg4Mi8zNTUyMTczNTgtN2JhOWE3NTktODU1NS00NDc3LTk1ZjUtMjYxOGRiNTE4MzVhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA1VDE5MjI1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI0NDE3MzkwZDFhNGFmNDIzMjFiY2EyODBhNTg1NjI5YzJlMWRhYmUzODExMzk3ZGUwM2VmZmU0MjE4ZTY2ZTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.E74r4paUa935FC9x7i5IdNstPcBq6qrPoONmumIhf5Q"
+                  src="https://github.com/user-attachments/assets/7ba9a759-8555-4477-95f5-2618db51835a"
                   width={500}
                   height={300}
                 />
