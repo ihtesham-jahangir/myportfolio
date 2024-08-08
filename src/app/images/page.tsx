@@ -32,7 +32,7 @@ const IndexPage = () => {
     >
       <Head>
         <title>Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <header className="mb-8">

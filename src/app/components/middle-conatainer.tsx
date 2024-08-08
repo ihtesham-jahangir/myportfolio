@@ -312,7 +312,7 @@ leveraging cutting-edge technologies to deliver impactful solutions.
         </div>
       </section>
       <>
-        <section className="text-gray-600 body-font relative" id="contact">
+        <section className="text-gray-600 body-font relative felx justify-center items-center pd-100" id="contact">
           <Contact />
         </section>
         <section className="text-gray-600 body-font" id="about">
