@@ -7,6 +7,7 @@ function Mainpage() {
     <div>
       <Header />
       <Middel />
+
       <Footer />
     </div>
   );

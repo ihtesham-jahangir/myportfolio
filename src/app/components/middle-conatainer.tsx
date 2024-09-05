@@ -5,7 +5,10 @@ import ab from '@/app/images/about.jpg';
 import a12 from "../images/12.png"; // Adjusted path
 import a13 from "../images/13.png"; // Adjusted path
 import Contact from './contact'; // Adjusted path
-
+import about from "@/app/images/about.jpg"
+import Reviews from "./review";
+import cs from "../images/project2.png"
+import cft from "../images/cft1.png"
 function Middle() {
   const [typewriterLoaded, setTypewriterLoaded] = useState(false);
 
@@ -64,7 +67,7 @@ function Middle() {
             <Image
               className="object-cover object-center rounded"
               alt=""
-              src="https://myportfolioihtesham.s3.amazonaws.com/about.JPG"
+              src={about}
               height={700}
               width={400}
             />
@@ -99,13 +102,15 @@ leveraging cutting-edge technologies to deliver impactful solutions.
                 </a>
               </div>
               <div className="md:p-2 p-1 w-1/2">
+              <a href="https://ekhedmah.com/">
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="https://dummyimage.com/501x301"
+                  src={cs}
                   width={501}
                   height={301}
                 />
+                </a>
               </div>
               <div className="md:p-2 p-1 w-full">
                 <a href="https://github.com/ihtesham-jahangir/ai-vision-streamlit-app"> 
@@ -175,20 +180,19 @@ leveraging cutting-edge technologies to deliver impactful solutions.
                 <Image
                   alt="gallery"
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src="https://dummyimage.com/600x360"
+                  src={cft}
                   width={600}
                   height={360}
                 />
                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                   <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                    THE SUBTITLE
+                    IT Specialist
                   </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                    Shooting Stars
+                  Issued by Credly from Pearson
                   </h1>
                   <p className="leading-relaxed">
-                    Photo booth fam kinfolk cold-pressed sriracha leggings
-                    jianbing microdosing tousled waistcoat.
+                  Expert in Artificial Intelligence with a strong background in developing innovative solutions and leveraging cutting-edge technologies.
                   </p>
                 </div>
               </div>
@@ -314,6 +318,9 @@ leveraging cutting-edge technologies to deliver impactful solutions.
       <>
         <section className="text-gray-600 body-font relative felx justify-center items-center pd-100" id="contact">
           <Contact />
+        </section>
+        <section className="text-gray-600 body-font relative felx justify-center items-center pd-100" id="review">
+          <Reviews />
         </section>
         <section className="text-gray-600 body-font" id="about">
           <div className="container px-5 py-24 mx-auto">

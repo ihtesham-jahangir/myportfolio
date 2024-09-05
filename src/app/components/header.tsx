@@ -26,6 +26,9 @@ function Header() {
             <a href="#about" className="mr-5 hover:text-gray-900">
               About
             </a>
+            <a href="#review" className="mr-5 hover:text-gray-900">
+              Client Review
+            </a>
           </nav>
           <a
             href="/resume.pdf"
