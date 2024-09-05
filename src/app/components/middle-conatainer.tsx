@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
-import ab from '@/app/images/about.jpg';
 import a12 from "../images/12.png"; // Adjusted path
 import a13 from "../images/13.png"; // Adjusted path
 import Contact from './contact'; // Adjusted path
-import about from "@/app/images/about.jpg"
+import about from "../images/about.jpg"
 import Reviews from "./review";
 import cs from "../images/project2.png"
 import cft from "../images/cft1.png"
