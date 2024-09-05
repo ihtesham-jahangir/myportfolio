@@ -1,7 +1,19 @@
+"use client"
 import React, { useState, useEffect } from "react";
 
+// Define the type for a review
+interface Review {
+  name: string;
+  review: string;
+  stars: number;
+  image: string;
+  websiteName: string;
+  websiteLink: string;
+}
+
 const Reviews = () => {
-  const [reviews, setReviews] = useState(() => {
+  // Use the Review interface for the reviews state
+  const [reviews, setReviews] = useState<Review[]>(() => {
     // Load saved reviews from local storage
     const savedReviews = localStorage.getItem("reviews");
     return savedReviews ? JSON.parse(savedReviews) : [];
@@ -10,7 +22,7 @@ const Reviews = () => {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [stars, setStars] = useState(0);
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState<string>("");
   const [websiteName, setWebsiteName] = useState("");
   const [websiteLink, setWebsiteLink] = useState("");
 
@@ -19,21 +31,23 @@ const Reviews = () => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
   }, [reviews]);
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImage(reader.result);
+        if (typeof reader.result === 'string') {
+          setImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newReview = {
+    const newReview: Review = {
       name,
       review,
       stars,
@@ -54,7 +68,6 @@ const Reviews = () => {
   };
 
   const handleResetReviews = () => {
-    // Clear reviews from local storage and reset state
     localStorage.removeItem("reviews");
     setReviews([]);
   };
@@ -142,7 +155,7 @@ const Reviews = () => {
         <button
           type="button"
           onClick={handleResetReviews}
-          className="  0 text-white px-4 py-2 rounded-lg mt-4 hover:bg-red-60 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="bg- text-white px-4 py-2 rounded-lg mt-4 hover: focus:outline-none focus:ring-2 focus:ring-red-500"
         >
           Reset Reviews
         </button>

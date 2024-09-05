@@ -1,35 +1,28 @@
 // pages/index.js
 "use client";
+
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Typewriter from "typewriter-effect";
+import dynamic from "next/dynamic";
 import logo from "./images/logo.svg";
 import Mainpage from "./components/main";
 import styles from "@/app/components/css/styles.module.css";
 
+// Dynamically import Typewriter to ensure it only loads on the client
+const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
+
 const IndexPage = () => {
   const [showMainPage, setShowMainPage] = useState(false);
-  const [typewriterLoaded, setTypewriterLoaded] = useState(false);
 
   useEffect(() => {
-    import("typewriter-effect")
-      .then(() => {
-        setTypewriterLoaded(true);
-      })
-      .catch((error) => {
-        console.error("Error importing Typewriter:", error);
-      });
-
     setTimeout(() => {
       setShowMainPage(true);
-    }, 1500); // 8000 milliseconds delay for demonstration
+    }, 1500); // 1500 milliseconds delay for demonstration
   }, []);
 
   return (
-    <div
-      className="min-h-screen flex flex-col justify-center items-center"
-    >
+    <div className="min-h-screen flex flex-col justify-center items-center">
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -49,16 +42,14 @@ const IndexPage = () => {
 
       {!showMainPage && (
         <div className="text-3xl text-gray-800 font-bold">
-          {typewriterLoaded && typeof window !== "undefined" && (
-            <Typewriter
-              options={{
-                strings: ["HELLO WORLD WELCOME TO MY PORTFOLIO"],
-                autoStart: true,
-                loop: false,
-                delay: 10,
-              }}
-            />
-          )}
+          <Typewriter
+            options={{
+              strings: ["HELLO WORLD WELCOME TO MY PORTFOLIO"],
+              autoStart: true,
+              loop: false,
+              delay: 10,
+            }}
+          />
         </div>
       )}
 
