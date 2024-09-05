@@ -66,7 +66,7 @@ function Middle() {
             <Image
               className="object-cover object-center rounded"
               alt=""
-              src={about}
+              src="https://drive.google.com/uc?id=1wRG9QySUfO9a_yhcvN6hcWf0RjTB_VsO"
               height={700}
               width={400}
             />

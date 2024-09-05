@@ -20,6 +20,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com', // Add more domains as needed
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
