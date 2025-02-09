@@ -1,0 +1,30 @@
+---
+deployment:
+  tasks:
+    # Define the deployment path (update with your cPanel public_html path)
+    - export DEPLOYPATH=/home/public_html/
+
+    # Navigate to the cloned repository
+    - cd $REPO_DIR
+
+    # Install dependencies
+    - npm install
+
+    # Build the Next.js application
+    - npm run build
+
+    # Export static files (if using static export)
+    - npm run export || echo "Static export skipped (for SSR or dynamic routing)."
+
+    # Copy static assets (out directory for static apps)
+    - if [ -d "out" ]; then rsync -av --delete out/ $DEPLOYPATH; fi
+
+    # Copy the .next build folder for SSR apps
+    - rsync -av --delete .next/ $DEPLOYPATH/.next
+
+    # Copy the public folder for static assets
+    - rsync -av --delete public/ $DEPLOYPATH/public
+
+    # Copy other necessary files (update this based on your project needs)
+    - rsync -av --delete package.json $DEPLOYPATH
+    - rsync -av --delete next.config.mjs $DEPLOYPATH
